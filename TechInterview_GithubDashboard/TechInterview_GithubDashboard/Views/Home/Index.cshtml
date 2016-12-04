@@ -1,13 +1,15 @@
-﻿@model IEnumerable<TechInterview_GithubDashboard.Models.TestModel>
+﻿@model IEnumerable<TechInterview_GithubDashboard.Models.EventModel>
 @{
     ViewBag.Title = "Home Page";
 }
 
 <div class="jumbotron">
+
+
     @foreach (var item in Model)
     {
-        <div>@item.ID</div>
-        <div>@item.Type</div>
+        <div>@item.Actor.DisplayLogin</div>
+        <div>@item.EventType</div>
         <div>@item.Created</div>
     }
     
