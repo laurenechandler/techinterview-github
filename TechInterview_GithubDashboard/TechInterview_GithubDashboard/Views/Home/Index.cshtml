@@ -4,15 +4,25 @@
 }
 
 <div class="jumbotron">
+    <button onclick="location.href='@Url.Action("Index", "Home")'">Refresh</button>
 
-
-    @foreach (var item in Model)
-    {
-        <div>@item.Actor.DisplayLogin</div>
-        <div>@item.EventType</div>
-        <div>@item.Created</div>
-    }
     
+        @foreach (var item in Model)
+        {
+            <div style="border: 1px solid black">
+                <div>@item.Actor.DisplayLogin</div>
+                <div>@item.EventType</div>
+                <div>@item.Repo.Name</div>
+                <div class="placeholder">Click here for additional event details</div>
+                <div class="hide details">
+                    Created At: @item.Created<br />
+                    Event ID: @item.ID<br />
+                    Public: @item.Public
+                </div>
+            </div>
+        }
+       
+
     @*<h1>ASP.NET</h1>
     <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
     <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
@@ -39,3 +49,15 @@
         <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
     </div>*@
 </div>
+
+@section Scripts 
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.placeholder').click(function () {
+                $(this).addClass('hide');
+                $(this).siblings('.details').removeClass('hide');
+            });
+        });
+    </script>    
+}
