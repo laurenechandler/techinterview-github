@@ -21,23 +21,8 @@ namespace TechInterview_GithubDashboard.Controllers
             Stream dataStream = webRequestURL.GetResponse().GetResponseStream();
             StreamReader reader = new StreamReader(dataStream);
             var eventModelList = JsonConvert.DeserializeObject<IEnumerable<EventModel>>(reader.ReadToEnd());
-
-
+            
             return View(eventModelList);
-        }
-
-        public ActionResult About() 
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
         }
     }
 }

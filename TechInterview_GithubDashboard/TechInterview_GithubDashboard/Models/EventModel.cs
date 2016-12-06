@@ -53,7 +53,7 @@ namespace TechInterview_GithubDashboard.Models
         [JsonProperty("created_at")]
         public string Created
         {
-            get { return created; }
+            get { return DateTime.Parse(created).ToString(); }
             set { created = value; }
         }
     }
