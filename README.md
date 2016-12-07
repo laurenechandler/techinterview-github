@@ -1,6 +1,30 @@
 # Technical Interview Homework: GitHub Dashboard
 
 
+##Instructions for Reviewer
+Option 1: Visit the following link on a mobile phone, tablet, or desktop web browser to view the GitHub User Dashboard.
+- http://chandler-techinterview-githubdash.qsrnei5tzq.us-west-2.elasticbeanstalk.com/
+
+Option 2: Clone with GitBash
+- Prerequisites: Must have GitBash on computer. You can download it at https://git-scm.com/downloads
+1. Click the Clone or Download button and copy the web url to clipboard.
+2. Open GitBash and path to the location you would like to clone the repository to. 
+3. In GitBash, type 'git clone <paste url here>' and hit enter. 
+4. Once the cloning completes, go to the folder you cloned the repository to and open the folder. 
+5. Path down to \TechInterview_GithubDashboard\TechInterview_GithubDashboard.sln 
+6. Double click the TechInterview_GithubDashboard.sln to open the project in Visual Studio. 
+7. In Visual Studio, press F5 or go to Debug>Start Debugging to open project in a web browser. 
+8. View the GitHub User Dashboard in the web browser window of your choice. 
+
+Option 3: Download the ZIP 
+1. Click the Clone or Download button and select Download ZIP.
+2. When the ZIP file finishes downloading, extract the ZIP folder. 
+3. Once extracted, path down to \TechInterview_GithubDashboard\TechInterview_GithubDashboard.sln
+4. Double click the TechInterview_GithubDashboard.sln to open the project in Visual Studio. 
+5. In Visual Studio, press F5 or go to Debug>Start Debugging to open project in a web browser. 
+6. View the GitHub User Dashboard in the web browser window of your choice. 
+
+
 ##Purpose
 The purpose of this exercise is to assess the candidate’s ability to build cross platform software clients that satisfy stated requirements. The completed assignment should not only satisfy the requirements outlined below, but also give the candidate an opportunity to show-off their skills.
 
