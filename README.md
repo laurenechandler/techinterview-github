@@ -2,10 +2,10 @@
 
 
 ##Instructions for Reviewer
-Option 1: Visit the following link on a mobile phone, tablet, or desktop web browser to view the GitHub User Dashboard.
+#####Option 1: Visit the following link on a mobile phone, tablet, or desktop web browser to view the GitHub User Dashboard.
 - http://chandler-techinterview-githubdash.qsrnei5tzq.us-west-2.elasticbeanstalk.com/
 
-Option 2: Clone with GitBash
+#####Option 2: Clone with GitBash
 - Prerequisites: Must have GitBash on computer. You can download it at https://git-scm.com/downloads
 1. Click the Clone or Download button and copy the web url to clipboard.
 2. Open GitBash and path to the location you would like to clone the repository to. 
@@ -16,7 +16,7 @@ Option 2: Clone with GitBash
 7. In Visual Studio, press F5 or go to Debug>Start Debugging to open project in a web browser. 
 8. View the GitHub User Dashboard in the web browser window of your choice. 
 
-Option 3: Download the ZIP 
+#####Option 3: Download the ZIP 
 1. Click the Clone or Download button and select Download ZIP.
 2. When the ZIP file finishes downloading, extract the ZIP folder. 
 3. Once extracted, path down to \TechInterview_GithubDashboard\TechInterview_GithubDashboard.sln
