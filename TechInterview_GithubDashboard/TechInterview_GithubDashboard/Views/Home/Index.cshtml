@@ -1,36 +1,42 @@
 ﻿@model IEnumerable<TechInterview_GithubDashboard.Models.EventModel>
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "GitHub Dashboard";
 }
 
-<div class="jumbotron">
-    <div style="padding: 5px 0px;">
-        Your Public Events Feed
-        <button onclick="location.href='@Url.Action("Index", "Home")'" style="float: right; background-color: Transparent; border: none;"><img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-refresh-128.png" style="height: 30px;" /></button>
-    </div>
-        <div style="background-color: white; font-size: 16px; border:1px solid black; border-radius: 5px; ">
-        @foreach (var item in Model)
-        {
-            <div style="border-bottom:1px solid gray; padding: 9px 10px;">
-                <img src="@item.Actor.AvatarURL" style="height: 48px;" />
-                <span style="font-weight:bold; font-size: 18px; margin-left: 8px;">@item.Actor.DisplayLogin</span> <br />
-                <div style="margin-left: 58px;">
-                    <span>Event Type: @item.EventType</span> <br />
-                    <span>Repository: @item.Repo.Name</span> <br />
-                    <a style="cursor: pointer;" class="showDetails">[+] Show event details</a>
-                    <a style="cursor: pointer;" class="hide hideDetails">[-] Hide event details</a>
-                    <div style="font-size: 14px;" class="hide details">
-                        Created At: @item.Created <br />
-                        Event ID: @item.ID <br />
-                        Public: @item.Public <br />
+<head>
+    <link rel="stylesheet" type="text/css" href="/Content/Custom.css">
+</head>
+
+<body>
+    <div class="jumbotron">
+        <div id="subtitle">
+            Your Public Events Feed
+            <button onclick="location.href='@Url.Action("Index", "Home")'"><img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-refresh-128.png" /></button>
+        </div>
+        <div id="eventList">
+            @foreach (var item in Model)
+            {
+                <div id="event">
+                    <img src="@item.Actor.AvatarURL" />
+                    <span id="username">@item.Actor.DisplayLogin</span> <br />
+                    <div id="eventText">
+                        <span class="bold">Event Type:</span> @item.EventType <br />
+                        <span class="bold">Repository:</span> @item.Repo.Name <br />
+                        <a class="showDetails">[+] Show event details</a>
+                        <a class="hide hideDetails">[-] Hide event details</a>
+                        <div class="hide details">
+                            Created At: @item.Created <br />
+                            Event ID: @item.ID <br />
+                            Public: @item.Public <br />
+                        </div>
                     </div>
                 </div>
-            </div>
-        }
+            }
+        </div>
     </div>
-</div>
+</body>
 
-@section Scripts 
+@section Scripts
 {
     <script type="text/javascript">
         $(document).ready(function () {
@@ -45,5 +51,5 @@
                 $(this).siblings('.showDetails').removeClass('hide');
             });
         });
-    </script>    
+    </script>
 }

@@ -1,0 +1,55 @@
+﻿#subtitle {
+    padding: 5px 0px;
+}
+
+button {
+    float: right; 
+    background-color: Transparent; 
+    border: none; 
+    position: absolute;
+}
+
+button>img {
+    height: 30px;
+}
+
+#eventList {
+    background-color: white; 
+    font-size: 16px; 
+    border:1px solid black; 
+    border-radius: 5px; 
+    padding: 5px 5px;
+}
+
+#event {
+    border-bottom:1px solid gray; 
+    padding: 5px;
+}
+
+#event>img {
+    height: 48px;
+}
+
+#username {
+    font-weight:bold; 
+    font-size: 24px; 
+    margin-left: 8px;
+}
+
+#eventText {
+    margin-left: 58px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#eventText>a {
+    cursor: pointer;
+}
+
+.details {
+    font-size: 14px;
+}
+
+
